@@ -1,0 +1,163 @@
+.header {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	padding: 35px 0px 28px 0px;
+	@media (max-width: 425px) {
+		padding: 0px 0px 29px 0px;
+	}
+}
+.headaer__container-big {
+	border-radius: 15px;
+	background-color: #FFF;
+	@media (max-width: 425px) {
+		border-radius: 0px 0px 20px 20px;
+		box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+		padding: 0;
+	}
+}
+.headaer__container-big_show {
+	transition: .3s;
+}
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+}
+.hamb {
+	display: none;
+}
+.popup {
+	display: none;
+}
+.header__logo {
+	width: 100px;
+	height: 36.269px;
+	@media (max-width: 425px) {
+		width: 80px;
+		height: 29.015px;
+	}
+}
+.header__list {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	font-size: 18px;
+	font-weight: 600;
+	@media (max-width: 425px) {
+		// display: none;
+		font-size: 16px;
+	}
+}
+.header__link {
+	transition: color .3s;
+	&:hover {
+		color: #0041A4;
+	}
+}
+.header__link-contact {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	@media (max-width: 425px) {
+		display: none;
+	}
+}
+.header__icon {
+	width: 30px;
+	height: 30px;
+}
+.header__number {
+	font-size: 18px;
+}
+
+
+@media (max-width: 425px) {
+.header__container .header__list {
+	display: none;
+}
+
+.hamb {
+	display: flex;
+	align-items: center;
+}
+
+.hamb__field {
+	cursor: pointer;
+}
+
+.bar {
+	display: block;
+	width: 30px;
+	height: 3px;
+	margin: 6px auto;
+	background-color: #272727;
+	transition: 0.2s;
+}
+
+.popup {
+	position: fixed;
+	top: -100%;
+	width: 100%;
+	height: 330px;
+	background-color: #fff;
+	z-index: 100;
+	display: flex;
+	transition: 0.3s;
+	border-radius: 0px 0px 20px 20px;
+}
+
+.popup.open {
+	top: 75px;
+}
+
+.popup .header__list {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	padding: 50px 0;
+	overflow: auto;
+}
+
+.popup .header__list > li {
+	width: 100%;
+}
+
+.popup .header__list > li > a {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 20px;
+	font-weight: bold;
+	color: #3f3f3f;
+}
+
+.popup .header__list > li > a:hover {
+	background-color: rgba(122, 82, 179, 0.1);
+}
+
+.hamb__field.active .bar:nth-child(2) {
+	opacity: 0;
+}
+
+.hamb__field.active .bar:nth-child(1) {
+	transform: translateY(9px) rotate(46deg);
+}
+
+.hamb__field.active .bar:nth-child(3) {
+	transform: translateY(-9px) rotate(133deg);;
+}
+
+body.noscroll {
+	overflow: hidden;
+}
+.headaer__container-big_show {
+	border-radius: 0;
+}
+}

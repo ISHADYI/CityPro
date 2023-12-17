@@ -1,0 +1,52 @@
+.company {
+	margin-top: -28px;
+	padding-bottom: 50px;
+	@media (max-width: 425px) {
+		margin-top: 50px;
+		padding-bottom: 25px;
+	}
+}
+.company__title {
+	color: #465067;
+	font-size: 45px;
+	line-height: 0.85;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 50px;
+	@media (max-width: 425px) {
+		font-size: 35px;
+		margin-bottom: 58px;
+	}
+}
+.company__list {
+	display: grid;
+	// grid-template-columns: repeat(3, 370px);
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	@media (max-width: 425px) {
+		gap: 20px;
+	}
+}
+.company__item {
+	position: relative;
+	border-radius: 20px;
+	background-color: #FFF;
+	box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.10);
+	padding: 10px 60px;
+	height: 260px;
+	@media (max-width: 425px) {
+		height: 120px;
+	}
+}
+.company__icon {
+	position: absolute;
+	max-width: 250px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	@media (max-width: 425px) {
+		max-width: 190px;
+	}
+}
